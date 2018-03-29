@@ -12,7 +12,17 @@
 */
 
 Route::get('/', function () {
-    return view('home');
+    $todos = [
+       
+    ];
+    $todos = [
+        'Get Shit 1',
+        'Get Shit 2',
+        'Get Shit 3',
+        'Get Shit 4',
+        'Get Shit 5'
+    ];
+    return view('home',compact('todos'));
 });
 
 Auth::routes();
