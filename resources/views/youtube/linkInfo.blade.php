@@ -2,6 +2,6 @@
 
 @section('content')
 
-{{ dd($info) }}
+{{ dd($info->video[0]->author) }}
 
 @endsection
