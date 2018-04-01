@@ -13,12 +13,21 @@ img {
 	text-shadow: 1px 1px 1px 3px;
 }
 
-::-webkit-input-placeholder {
+#get-info-form::-webkit-input-placeholder {
    text-align: center;
 }
 
-h2 {
+
+#card-header {
     
     margin: 20px;
     text-shadow: 2px 2px 2px 2px;
 }
+
+input:invalid {
+        border: 1px solid red;
+      }
+
+input:valid {
+        border: 1px solid black;
+      }
