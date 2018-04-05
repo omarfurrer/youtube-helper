@@ -16,46 +16,46 @@
 }
 
 #get-info-form::-webkit-input-placeholder {
-   text-align: center;
+	text-align: center;
 }
 
 
 #card-header {
-    
-    margin: 20px;
-    text-shadow: 2px 2px 2px 2px;
+
+	margin: 20px;
+	text-shadow: 2px 2px 2px 2px;
 }
 
 input:invalid {
-        border: 1px solid red;
-      }
+	border: 1px solid red;
+}
 
 input:valid {
-        border: 1px solid black;
-      }
+	border: 1px solid black;
+}
 
 
-   /* One-video card display */
+/* One-video card display */
 
-   #myCard-img {
-     margin: auto;
-	  border: 3px solid white;
-	  max-width: 100%;
+#myCard-img {
+	margin: auto;
+	border: 3px solid white;
+	max-width: 100%;
 
-   }
-      
+}
+
 
 #myCard-title {
 	text-shadow: 5px 5px 5px 5px;
-    font-weight: bold; 
+	font-weight: bold; 
 	color: #5d5d3c;
 	font-size: 20px;
 }
 
 #myCard {
-max-width: 75%;
-margin: auto;
-border: 1px solid #5d5d3c;
+	max-width: 75%;
+	margin: auto;
+	border: 1px solid #5d5d3c;
 
 }
 
@@ -66,30 +66,14 @@ border: 1px solid #5d5d3c;
 
 /* Playlist display styling  */
 
-#playlistCard-body {
-  
-  background-color: #1a1a1a;
-}
-
-
-#playlistCard {
-  margin: auto;
-  max-width: 100%;
-}
 
 .hr {
-	margin: 10px;
+	margin: 15px;
 	color: #1a1a1a;
 
 }
 
-#playlistCard-img {
-	 max-width: 100%;
-	 margin: auto;
-	  border: 3px solid white;
-	  position: static;
-   }
-#playlist-ul {
-	list-style-type: none;
-}
+
+
+
 
