@@ -12,7 +12,8 @@
  */
 
 Route::get('/', 'PagesController@home');
-Route::get('/youtube/link/info', 'YoutubeController@getLinkInfo');
+Route::get('youtube/link/info', 'YoutubeController@getLinkInfo');
+Route::get('youtube/{url}/download', 'YoutubeController@download');
 
 Auth::routes();
 

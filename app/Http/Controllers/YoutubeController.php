@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests\Youtube\GetLinkInfoRequest;
+use App\Http\Requests\Youtube\DownloadVideoRequest;
 use App\Services\YoutubeService;
 
 class YoutubeController extends Controller {
@@ -32,9 +33,19 @@ class YoutubeController extends Controller {
     public function getLinkInfo(GetLinkInfoRequest $request)
     {
         $url = $request->get('url');
-        $info = $this->youtubeService->getInfo($url);
-        
+        $info = $this->youtubeService->getInfo($url, TRUE);
         return view('youtube.linkInfo', compact('info'));
+    }
+
+    /**
+     * Download video or playlist.
+     * 
+     * @param DownloadVideoRequest $request
+     */
+    public function download(DownloadVideoRequest $request)
+    {
+        $url = $request->get('url');
+        return $this->youtubeService->download($url);
     }
 
 }

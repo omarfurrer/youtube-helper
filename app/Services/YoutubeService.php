@@ -31,11 +31,24 @@ class YoutubeService {
      * @param type $url
      * @return Object
      */
-    public function getInfo($url)
+    public function getInfo($url, $withDownloadLinks = false)
     {
         $this->setUrl($url);
         $this->checkUrl();
-        return $this->youtubeDownloader->getInfo();
+        return $this->youtubeDownloader->getInfo($withDownloadLinks);
+    }
+
+    /**
+     * Using a YT video/playlist url, download video or playlist.
+     * 
+     * @param type $url
+     * @return Object
+     */
+    public function download($url)
+    {
+        $this->setUrl($url);
+        $this->checkUrl();
+        return $this->youtubeDownloader->download();
     }
 
     /**

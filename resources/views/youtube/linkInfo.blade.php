@@ -8,7 +8,6 @@
 
 <!-- Video / card View section-->
 
-{{dd($info)}}
 
 <div class="container text-center">
 	<div class="row">
@@ -29,7 +28,7 @@
                     
 				</div>
 				<div class="col-md-2 offset-md-10">
-					<a class="btn btn-primary btn-block" href="{{ url('video/'.$info->video_code.'/download') }}">Download</a>
+                                    <a class="btn btn-primary btn-block" rel="nofollow" download href="{{ $info->full_formats[0]->url .'&title='.$info->full_formats[0]->filename }}">Download</a>
 				</div>
 			</div>
 		</div>
@@ -41,7 +40,6 @@
 
 @elseif ($info->response_type == "playlist")
 
-{{dd($info)}}
 
 <!-- list / playlist View -->
 <div class="container">
@@ -68,7 +66,7 @@
 
 				</li>
 				<div class="col-md-2 offset-md-10">
-					<a class="btn btn-primary btn-block" href="{{ url('video/'.$info->video[$i]->video_code.'/download') }}">Download</a>
+					<a class="btn btn-primary btn-block" rel="nofollow" download href="{{ $info->video[$i]->full_formats[0]->url .'&title='.$info->video[$i]->full_formats[0]->filename }}">Download</a>
 				</div>
 				<hr>
 
